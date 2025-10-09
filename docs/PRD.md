@@ -38,33 +38,33 @@ Integration: Seamless integration with MCAR without conflicts reported.
 
 ### **2. User Personas & Stories**
 
-2.1. Persona 1: The World-Builder William
+**2.1. Persona 1: The World-Builder William**
 
-Playstyle: Enjoys creating elaborate towns and stories. Focuses on aesthetics and the "life" of his world.
+**Playstyle**: Enjoys creating elaborate towns and stories. Focuses on aesthetics and the "life" of his world.
 
-Goals: To create a village that feels alive, with unique citizens who have histories and families.
+**Goals**: To create a village that feels alive, with unique citizens who have histories and families.
 
-Frustrations: All villagers look and act the same. Children are just small adults with no connection to their parents.
+**Frustrations**: All villagers look and act the same. Children are just small adults with no connection to their parents.
 
-2.2. Persona 2: The Technical Tester Tina
+**2.2. Persona 2: The Technical Tester Tina**
 
-Playstyle: Enjoys complex systems, mechanics, and optimization. Likes to have fine-grained control over her world.
+**Playstyle**: Enjoys complex systems, mechanics, and optimization. Likes to have fine-grained control over her world.
 
-Goals: To manage her village efficiently and understand the underlying rules of genetics and aging.
+**Goals**: To manage her village efficiently and understand the underlying rules of genetics and aging.
 
-Frustrations: Lack of control over villager professions and annoying, repetitive sounds.
+**Frustrations**: Lack of control over villager professions and annoying, repetitive sounds.
 
-2.3. User Stories
+**2.3. User Stories**
 
-As William, I want child villagers to inherit physical traits like height and face shape from their parents so that I can see a visual lineage and feel that families are unique.
+**As** William, **I want** child villagers to inherit physical traits like height and face shape from their parents **so that I can** see a visual lineage and feel that families are unique.
 
-As William, I want villagers to eventually grow old and pass away so that I can experience a natural life cycle in my village, adding to its story.
+**As** William, **I want** villagers to eventually grow old and pass away **so that I can** experience a natural life cycle in my village, adding to its story.
 
-As Tina, I want to use a special item to summon specific villagers to my location so that I can efficiently manage and relocate my villagers without tedious pushing.
+**As** Tina, **I want** to use a special item to summon specific villagers to my location **so that I can** efficiently manage and relocate my villagers without tedious pushing.
 
-As Tina, I want to manually assign a villager to a job site block so that I can precisely control the profession distribution in my village.
+**As** Tina, **I want** to manually assign a villager to a job site block **so that I can** precisely control the profession distribution in my village.
 
-As Tina, I want to be able to mute laughter of adult villagers so that I can build in peace without disruptive noise.
+**As** Tina, **I want** to be able to mute laughter of adult villagers **so that I can** build in peace without disruptive noise.
 
 ### **3. Competitive Analysis (Mod Landscape)**
 
@@ -100,16 +100,14 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
 - **Description**: Allows players to summon villagers over long distances for better management.
 - **Features**:
   - **Blueprint Item**: The "Blueprint", a modded item from MCAR, can be used as the key for villager teleportation.
-  - **Summoning Mechanic**: Player can right-click while holding the Blueprint to open a GUI to select a villager from the current village, ~~or use it on a specific villager to mark them~~. A subsequent right-click in the target location will summon the selected/~~marked~~ villager to the player's side.
-  - **Cooldown/Cost**: <u>*The process may have a cooldown or require experience levels to balance its utility*</u>.
+  - **Summoning Mechanic**: Player can right-click while holding the Blueprint to open a GUI to select a villager from the current village. A subsequent right-click in the target location will summon the selected villager to the player's side.
 
 #### **4.2. Genetics & Inheritance System**
 
 - **Description**: Governs the physical appearance of child villagers based on their parents.
 - **Features**:
-
-  - **Trait Pool**: Defines inheritable traits: Height, Weight, Face Type, Skin Tone.
-- **Inheritance Logic**: When a child villager is born, for each trait (height, weight, face, skin), the game randomly selects one gene per allele from the both two parents and copies that specific trait from them. This creates a child that is a unique mix of both parents, rather than a random one or a generic clone.
+  - **Trait Pool**: Defines inheritable traits: **Face Type**, **Skin Tone**, **Skin Pattern**.
+  - **Inheritance Logic**: When a child villager is born, for each trait (face, skin tone and pattern), the game randomly selects one gene per allele from the both two parents and copies that specific trait from them. This creates a child that is a unique mix of both parents, rather than a random one or a generic clone.
 
 #### **4.3. Lifespan & Aging System**
 
@@ -127,7 +125,7 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
 - **Description**: Small but impactful changes to villager behavior and player control.
 - **Features**:
   - **Manual Job Assignment**: Villagers will no longer automatically claim a job site block upon proximity. Instead, the player must manually initiate the binding (by crouch-right-clicking the villager with the job site block in hand).
-  - **Villager Sound Muting**: Players are given the ability to toggle off the laughter emitted by adult villagers. This could be done via a config option or an in-game interaction (e.g., using a specific item on the villager).
+  - **Villager Sound Muting**: Players are given the ability to toggle off the laughter emitted by adult villagers. This could be done via a config option.
 
 ### **5. Task Priority**
 
@@ -140,12 +138,12 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
   </tr>
   <tr>
     <td rowspan="2">Teleportation System</td>
-    <td>Blueprint Item & Summoning Mechanic</td>
+    <td>Blueprint Item</td>
     <td><span style="color:orchid;font-weight:600">P1</span></td>
     <td><input type="checkbox"/></td>
   </tr>
   <tr>
-    <td>GUI & Cost/Balance</td>
+    <td>GUI & Summoning Mechanic</td>
     <td><span style="color:deepskyblue">P2</span></td>
     <td><input type="checkbox"/></td>
   </tr>
@@ -188,6 +186,7 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
     <td><input type="checkbox"/></td>
   </tr>
 </table>
+
 
 ### **6. Technical Architecture**
 
