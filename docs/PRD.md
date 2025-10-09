@@ -82,16 +82,18 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
     </tr>
     <tr>
         <td><b>Minecraft Comes Alive: Reborn (MCAR)</b></td>
-        <td></td>
-        <td></td>
-        <td>-</td>
-        <td>-</td>
-        <td><img src="" style="max-height: 200px"/></td>
-        <td></td>
+        <td><strong>1. Deep Social & Family Simulation:</strong> Transforms villagers into named humans, enabling complex interactions like marriage, having children, and establishing multi-generational families. Children can grow up and perform chores.<br><br> <strong>2. Rich Role-Playing Elements:</strong> Offers extensive role-playing depth with over 2000 dialogue lines, 20 languages, and more than 200 skins. Villagers possess unique personalities, moods, and memories, significantly enhancing immersion.<br><br> <strong>3. Unique Boss Mechanics & Progression:</strong> Features a unique end-game challenge where players can summon and battle the Grim Reaper, a powerful boss with complex abilities, to obtain the Staff of Life for resurrecting deceased family members.<br><br> <strong>4. Multiplayer Support:</strong> Integrates well into server environments, allowing players to marry and have children with each other, enhancing the social experience in multiplayer.</td>
+        <td><strong>1. Potential for Inconsistency Between Versions:</strong> Features may vary between versions. For example, the magic crystal ball used for initial character setup in earlier versions was reportedly removed in newer ones, which could lead to user confusion.<br><br> <strong>2. High Difficulty Spike for Key Features:</strong> Acquiring the Staff of Life requires defeating the Grim Reaper, a very tough boss immune to projectiles and poison, which may pose a significant challenge for many players.<br><br> <strong>3. Potential for World Generation Conflicts:</strong> The initial setup using the magic crystal ball was noted to generate buildings that could overwrite existing structures in the world, potentially causing issues in modded environments.<br><br> <strong>4. Complexity in Configuration:</strong> The mod offers a vast array of configurable options, which, while powerful, could be overwhelming for less technical users to fine-tune.</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td><img src="https://cdn.modrinth.com/data/1W98a849/images/3cfd812436d5dbf095ad31c6265564fbca24233a.png" style="max-height: 200px"/></td>
+        <td><strong>Our mod, "Villagers Come More Alive," acts as an addon to MCAR and focuses on deepening the simulation by introducing:</strong><br/>1. A defined lifespan and aging system, leading to natural death.<br/>2. Genetic inheritance for physical traits in offspring.<br/>3. Quality-of-life enhancements like villager teleportation and manual job assignment, addressing some of MCAR's management complexities.</td>
     </tr>
 </table>
 
 ### **4. Core Features & Modules**
+
+![PRD](Product%20Architecture%20Diagram.png)
 
 #### **4.1 Teleportation System**
 
@@ -99,7 +101,7 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
 - **Features**:
   - **Blueprint Item**: The "Blueprint", a modded item from MCAR, can be used as the key for villager teleportation.
   - **Summoning Mechanic**: Player can right-click while holding the Blueprint to open a GUI to select a villager from the current village, ~~or use it on a specific villager to mark them~~. A subsequent right-click in the target location will summon the selected/~~marked~~ villager to the player's side.
-  - **Cooldown/Cost**: *The process may have a cooldown or require experience levels to balance its utility*.
+  - **Cooldown/Cost**: <u>*The process may have a cooldown or require experience levels to balance its utility*</u>.
 
 #### **4.2. Genetics & Inheritance System**
 
@@ -107,10 +109,7 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
 - **Features**:
 
   - **Trait Pool**: Defines inheritable traits: Height, Weight, Face Type, Skin Tone.
-
-  - **Inheritance Logic**: When a child villager is born, for each trait (height, weight, face, skin), the game randomly selects one gene per allele from the both two parents and copies that specific trait from them.
-
-  - **Result**: This creates a child that is a unique mix of both parents, rather than a random one or a generic clone.
+- **Inheritance Logic**: When a child villager is born, for each trait (height, weight, face, skin), the game randomly selects one gene per allele from the both two parents and copies that specific trait from them. This creates a child that is a unique mix of both parents, rather than a random one or a generic clone.
 
 #### **4.3. Lifespan & Aging System**
 
@@ -129,8 +128,6 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
 - **Features**:
   - **Manual Job Assignment**: Villagers will no longer automatically claim a job site block upon proximity. Instead, the player must manually initiate the binding (by crouch-right-clicking the villager with the job site block in hand).
   - **Villager Sound Muting**: Players are given the ability to toggle off the laughter emitted by adult villagers. This could be done via a config option or an in-game interaction (e.g., using a specific item on the villager).
-
-![](Product%20Architecture%20Diagram.png)
 
 ### **5. Task Priority**
 
@@ -153,8 +150,13 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
     <td><input type="checkbox"/></td>
   </tr>
   <tr>
-    <td>Genetics & Inheritance System</td>
-    <td>Trait Inheritance Logic</td>
+    <td rowspan="2">Genetics & Inheritance System</td>
+    <td>Trait Pool</td>
+    <td><span style="color:red;font-weight:900">P0</span></td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+    <td>Inheritance Logic</td>
     <td><span style="color:red;font-weight:900">P0</span></td>
     <td><input type="checkbox"/></td>
   </tr>
@@ -171,7 +173,7 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
   </tr>
   <tr>
     <td>Death from Old Age</td>
-    <td><span style="color:orchid;font-weight:600">P1</span></td>
+    <td><span style="color:red;font-weight:900">P0</span></td>
     <td><input type="checkbox"/></td>
   </tr>
   <tr>
@@ -186,7 +188,6 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
     <td><input type="checkbox"/></td>
   </tr>
 </table>
-
 
 ### **6. Technical Architecture**
 
