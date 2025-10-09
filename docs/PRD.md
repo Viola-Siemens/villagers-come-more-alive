@@ -12,7 +12,7 @@
 - [ ] In Review
 - [ ] Approved
 
-**Issue Tracker:** [https://github.com/Viola-Siemens/villagers-come-more-alive/issues](https://github.com/Viola-Siemens/Spectrum-Rush/issues)
+**Issue Tracker:** [https://github.com/Viola-Siemens/villagers-come-more-alive/issues](https://github.com/Viola-Siemens/villagers-come-more-alive/issues)
 
 ---
 
