@@ -1,0 +1,36 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+*.env
+
+# vscode
+.vscode/
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+backup
+
+# Files from Forge MDK
+forge*changelog.txt
+/mapppings
+/mcmodsrepo
+/local.properties
+
+# Files from architectury
+.architectury-transformer
