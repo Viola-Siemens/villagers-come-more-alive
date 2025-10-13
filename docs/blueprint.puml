@@ -1,0 +1,12 @@
+@startuml
+
+title Blueprint
+
+skin rose
+
+actor player
+participant screen
+participant menu
+participant server
+
+@enduml

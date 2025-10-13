@@ -12,9 +12,35 @@ architectury {
 subprojects {
     apply plugin: 'dev.architectury.loom'
 
+    repositories {
+        maven {
+            name = 'ParchmentMC'
+            url = 'https://maven.parchmentmc.org'
+        }
+
+        maven {
+            name = 'JitPack'
+            url = 'https://jitpack.io'
+            content {
+                includeGroup "com.github.Luke100000"
+            }
+        }
+
+        flatDir {
+            dirs '../libs'
+        }
+    }
+
     dependencies {
         minecraft "com.mojang:minecraft:${project.minecraft_version}"
-        mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+        mappings loom.layered() {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-1.20.1:2023.09.03@zip")
+        }
+
+        modImplementation 'com.github.Luke100000:minecraft-comes-alive:26648fa29bc596300cc66f760671ceceaca12d61'
+
+        implementation 'com.google.code.findbugs:jsr305:3.0.2'
     }
 }
 

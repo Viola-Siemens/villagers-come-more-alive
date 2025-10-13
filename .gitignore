@@ -25,6 +25,7 @@ build
 eclipse
 run
 backup
+libs/*.jar
 
 # Files from Forge MDK
 forge*changelog.txt
