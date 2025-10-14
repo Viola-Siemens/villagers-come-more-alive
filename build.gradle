@@ -38,9 +38,9 @@ subprojects {
             parchment("org.parchmentmc.data:parchment-1.20.1:2023.09.03@zip")
         }
 
-        modImplementation 'com.github.Luke100000:minecraft-comes-alive:26648fa29bc596300cc66f760671ceceaca12d61'
-
         implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+        modImplementation "com.github.Luke100000:minecraft-comes-alive:$rootProject.mca_commit"
     }
 }
 
@@ -98,7 +98,7 @@ forgix {
 
     forge {
         jarLocation = "build/libs/${rootProject.name}-${rootProject.version}.jar"
-        mixin "mca.mixin.json"
+        mixin "vcma.mixin.json"
     }
 
     fabric {

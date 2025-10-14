@@ -52,7 +52,7 @@ Integration: Seamless integration with MCAR without conflicts reported.
 
 **Goals**: To manage her village efficiently and understand the underlying rules of genetics and aging.
 
-**Frustrations**: Lack of control over villager professions and annoying, repetitive sounds.
+**Frustrations**: Lack of control over villager professions.
 
 **2.3. User Stories**
 
@@ -63,8 +63,6 @@ Integration: Seamless integration with MCAR without conflicts reported.
 **As** Tina, **I want** to use a special item to summon specific villagers to my location **so that I can** efficiently manage and relocate my villagers without tedious pushing.
 
 **As** Tina, **I want** to manually assign a villager to a job site block **so that I can** precisely control the profession distribution in my village.
-
-**As** Tina, **I want** to be able to mute laughter of adult villagers **so that I can** build in peace without disruptive noise.
 
 ### **3. Competitive Analysis (Mod Landscape)**
 
@@ -125,7 +123,6 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
 - **Description**: Small but impactful changes to villager behavior and player control.
 - **Features**:
   - **Manual Job Assignment**: Villagers will no longer automatically claim a job site block upon proximity. Instead, the player must manually initiate the binding (by crouch-right-clicking the villager with the job site block in hand).
-  - **Villager Sound Muting**: Players are given the ability to toggle off the laughter emitted by adult villagers. This could be done via a config option.
 
 ### **5. Task Priority**
 
@@ -178,11 +175,6 @@ This mod is an addon to MCAR and focuses on a niche of villager life simulation.
     <td rowspan="2">Quality of Life & Interaction Tweaks</td>
     <td>Manual Job Assignment</td>
     <td><span style="color:orchid;font-weight:600">P1</span></td>
-    <td><input type="checkbox"/></td>
-  </tr>
-  <tr>
-    <td>Villager Sound Muting</td>
-    <td><span>P3</span></td>
     <td><input type="checkbox"/></td>
   </tr>
 </table>

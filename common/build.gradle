@@ -1,0 +1,20 @@
+architectury {
+  common rootProject.enabled_platforms.split(',')
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.loader_version"
+    modImplementation "dev.architectury:architectury:$rootProject.architectury_version"
+}
+
+
+publishing {
+  publications {
+    mavenCommon(MavenPublication) {
+      artifactId = rootProject.artifactId
+      groupId = rootProject.groupId
+      version = version + "+common"
+      from components.java
+    }
+  }
+}
