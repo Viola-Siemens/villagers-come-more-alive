@@ -2,11 +2,36 @@
 
 title Blueprint
 
+!pragma teoz true
+
 skin rose
 
 actor player
 participant screen
 participant menu
-participant server
+participant world
+
+player -> screen: Use blueprint item
+note left: MCAR logic
+screen -> menu: Create and bind menu
+menu -> screen: Set screen
+activate screen #pink
+player -> screen: Click "Villager" button
+screen -> menu: Query all villagers
+menu -> screen: Show all villagers
+activate screen #orange
+
+player -> screen: Right-click on a\nvillager's name
+note left: VCMA Modded logic
+screen -> menu: Validate operation
+menu -> screen: Show operation list
+activate screen #darksalmon
+player -> screen: Click "Teleport"
+screen -> menu: Validate operation
+deactivate screen
+menu -> screen: Close screen
+& menu -> world: Teleport villager to player
+deactivate screen
+deactivate screen
 
 @enduml
