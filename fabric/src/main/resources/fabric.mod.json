@@ -13,6 +13,7 @@
   "license": "GPL v3",
   "icon": "logo.png",
   "environment": "*",
+  "accessWidener": "${mod_id}.accesswidener",
   "entrypoints": {
     "main": [
       "com.hexagram2021.vcma.fabric.VillagersComeMoreAliveFabric"
