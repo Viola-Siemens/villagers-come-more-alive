@@ -1,0 +1,21 @@
+{
+  "language": "Chinese",
+  "language.code": "zh_cn",
+  "language.region": "China",
+
+  "gui.vcma.blueprint.option.title": "操作选项",
+  "gui.vcma.blueprint.option.teleport": "传送到此处",
+  "gui.vcma.blueprint.option.teleport_to": "传送至村民位置",
+  "config.jade.plugin_vcma.aging": "MCA 村民衰老",
+
+  "death.attack.vcma_die_in_bed": "%s衰老而死",
+
+  "jade.vcma.bracket": "年龄：%s",
+  "jade.vcma.childhood": "幼年",
+  "jade.vcma.adulthood": "青年",
+  "jade.vcma.midlife": "中年",
+  "jade.vcma.elder": "老年",
+  "jade.vcma.immune_to_aging": "免疫衰老",
+
+  "message.vcma.teleport.fail": "传送失败：目标非法或无法选中"
+}

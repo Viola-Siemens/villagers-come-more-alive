@@ -13,11 +13,11 @@ mixin {
 legacyForge {
     version = "${minecraft_version}-${forge_version}"
 
-    validateAccessTransformers = true
+    validateAccessTransformers = false
 
     def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) {
-        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+        accessTransformers = [at.absolutePath]
     }
     parchment {
         minecraftVersion = parchment_minecraft
@@ -58,9 +58,10 @@ repositories {
 dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-
-    //modCompileOnly("curse.maven:time_feeds_villager-1292564:6698111")
-    modImplementation "com.github.Luke100000:minecraft-comes-alive:$mca_commit"
+    modImplementation group: 'curse.maven', name: "mca-535291", version: mca_version
+    modImplementation group: 'curse.maven', name: 'jade-324717', version: '6271651'
+    modRuntimeOnly group: "curse.maven", name: "architectury-419699", version: architectury_forge_version
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1"))
 }
 

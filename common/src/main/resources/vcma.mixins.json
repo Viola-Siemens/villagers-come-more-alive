@@ -7,9 +7,9 @@
     "defaultRequire": 1
   },
   "client": [
-    "BlueprintScreenMixin"
   ],
   "mixins": [
-    "VillagerEntityMCAMixin"
+    "AcquirePoiMixin",
+    "ValidateNearbyPoiMixin"
   ]
 }

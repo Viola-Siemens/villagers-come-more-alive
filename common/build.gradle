@@ -24,10 +24,21 @@ legacyForge {
 
 repositories {
     maven {
-        name = 'JitPack'
-        url = 'https://jitpack.io'
+        name = 'Maven from Viola Siemens'
+        url = "https://viola-siemens.github.io/pages/maven/"
         content {
-            includeGroup "com.github.Luke100000"
+            includeGroup "com.hexagram2021"
+        }
+    }
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
+    maven { // TOP
+        name = "Curse Maven"
+        url = "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
         }
     }
     flatDir {
@@ -40,8 +51,10 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
+    modCompileOnly group: 'curse.maven', name: 'jade-324717', version: '6271651'
 
-    modImplementation "com.github.Luke100000:minecraft-comes-alive:$mca_commit"
+    modImplementation group: 'com.hexagram2021', name: 'chromosomelib-common', version: chromosomelib_version
+    modImplementation group: "fuzs.forgeconfigapiport", name: "forgeconfigapiport-fabric", version: forgeconfigapiport_version
 }
 
 configurations {

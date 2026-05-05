@@ -7,6 +7,13 @@ repositories {
         name = "Fuzss"
         url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
     }
+    maven {
+        name = "CurseMaven"
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
@@ -14,7 +21,10 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
     }
-    modApi("fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${fcap_version}")
+    modImplementation group: 'fuzs.forgeconfigapiport', name: "forgeconfigapiport-fabric", version: fcap_version
+    modImplementation group: 'curse.maven', name: "mca-535291", version: mca_version
+    modImplementation group: 'curse.maven', name: 'jade-324717', version: '6291330'
+    modRuntimeOnly group: "curse.maven", name: "architectury-419699", version: architectury_fabric_version
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'

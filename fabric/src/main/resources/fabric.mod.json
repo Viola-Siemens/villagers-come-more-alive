@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "repo": "${issue_tracker_url}"
+  },
+  "license": "GPL v3",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.hexagram2021.vcma.fabric.VillagersComeMoreAliveFabric"
+    ]
+  },
+  "mixins": [
+    "vcma.mixins.json",
+    "vcma.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "forgeconfigapiport": "*",
+    "minecraft": ">=1.20 <=1.20.1"
+  }
+}

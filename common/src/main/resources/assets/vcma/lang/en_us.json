@@ -1,0 +1,21 @@
+{
+  "language": "English",
+  "language.code": "en_us",
+  "language.region": "United States",
+
+  "gui.vcma.blueprint.option.title": "Options",
+  "gui.vcma.blueprint.option.teleport": "Teleport here",
+  "gui.vcma.blueprint.option.teleport_to": "Teleport to this villager",
+  "config.jade.plugin_vcma.aging": "MCA Villager Aging",
+
+  "death.attack.vcma_die_in_bed": "%s dies of old age",
+
+  "jade.vcma.bracket": "Bracket: %s",
+  "jade.vcma.childhood": "Childhood",
+  "jade.vcma.adulthood": "Adulthood",
+  "jade.vcma.midlife": "Midlife",
+  "jade.vcma.elder": "Elder",
+  "jade.vcma.immune_to_aging": "Immune to Aging",
+
+  "message.vcma.teleport.fail": "Teleport failed: The target is illegal or cannot be selected"
+}
