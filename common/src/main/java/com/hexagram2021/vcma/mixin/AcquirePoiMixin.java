@@ -27,7 +27,7 @@ import java.util.function.Predicate;
  */
 @Mixin(AcquirePoi.class)
 public class AcquirePoiMixin {
-	@Inject(method = "lambda$create$6", at = @At(value = "HEAD"), remap = false, cancellable = true)
+	@Inject(method = "lambda$create$6", at = @At(value = "HEAD"), cancellable = true)
 	private static void vcma$cancelIfElder(boolean onlyIfAdult, MutableLong time, Long2ObjectMap<?> map,
 										   Predicate<Holder<PoiType>> acquirablePois, MemoryAccessor<Const.Mu<Unit>, GlobalPos> memoryAccessor,
 										   Optional<Byte> entityEventId, ServerLevel serverLevel, PathfinderMob mob, long ticks,

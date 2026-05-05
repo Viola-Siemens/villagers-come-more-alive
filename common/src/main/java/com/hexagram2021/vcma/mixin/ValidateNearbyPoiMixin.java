@@ -24,7 +24,7 @@ import java.util.function.Predicate;
  */
 @Mixin(ValidateNearbyPoi.class)
 public class ValidateNearbyPoiMixin {
-	@Inject(method = "lambda$create$0", at = @At("HEAD"), remap = false, cancellable = true)
+	@Inject(method = "lambda$create$0", at = @At("HEAD"), cancellable = true)
 	private static void vcma$cancelIfElder(BehaviorBuilder.Instance<LivingEntity> instance,
 										   MemoryAccessor<IdF.Mu, GlobalPos> memoryAccessor,
 										   Predicate<Holder<PoiType>> poiValidator,
