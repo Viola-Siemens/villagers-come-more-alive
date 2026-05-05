@@ -2,6 +2,7 @@ package com.hexagram2021.vcma.forge.mixin;
 
 import com.hexagram2021.vcma.entity.IAgingMCAEntity;
 import com.hexagram2021.vcma.register.VCMADamageSources;
+import com.hexagram2021.vcma.utils.PoiUtils;
 import forge.net.mca.entity.VillagerEntityMCA;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -70,6 +71,7 @@ public class VillagerEntityMCAMixin implements IAgingMCAEntity {
 				VillagerProfession profession = current.getProfession();
 				if(profession != VillagerProfession.NONE && profession != VillagerProfession.NITWIT) {
 					current.setProfession(VillagerProfession.NONE);
+					PoiUtils.releasePoi(current);
 				}
 			}
 		}
