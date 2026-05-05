@@ -12,6 +12,7 @@
   ],
   "mixins": [
     "AcquirePoiMixin",
+    "AssignProfessionFromJobSiteMixin",
     "ValidateNearbyPoiMixin",
     "VillagerEntityMCAMixin"
   ]
