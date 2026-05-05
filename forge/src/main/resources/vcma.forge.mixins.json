@@ -11,6 +11,8 @@
     "BlueprintScreenMixin"
   ],
   "mixins": [
+    "AcquirePoiMixin",
+    "ValidateNearbyPoiMixin",
     "VillagerEntityMCAMixin"
   ]
 }

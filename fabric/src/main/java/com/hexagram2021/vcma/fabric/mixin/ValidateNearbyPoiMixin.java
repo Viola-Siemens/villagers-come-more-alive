@@ -1,4 +1,4 @@
-package com.hexagram2021.vcma.mixin;
+package com.hexagram2021.vcma.fabric.mixin;
 
 import com.hexagram2021.vcma.entity.IAgingMCAEntity;
 import com.mojang.datafixers.kinds.IdF;
@@ -24,7 +24,7 @@ import java.util.function.Predicate;
  */
 @Mixin(ValidateNearbyPoi.class)
 public class ValidateNearbyPoiMixin {
-	@Inject(method = "lambda$create$0", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "method_47187", at = @At("HEAD"), cancellable = true)
 	private static void vcma$cancelIfElder(BehaviorBuilder.Instance<LivingEntity> instance,
 										   MemoryAccessor<IdF.Mu, GlobalPos> memoryAccessor,
 										   Predicate<Holder<PoiType>> poiValidator,
